@@ -10,7 +10,7 @@ export default function Profile() {
   const [filePerc, setFilePercent] = useState(0);
   const [fileUploadError, setFileUploadError] = useState(false)
   const [formData, setFormData] = useState({});
-  console.log(formData);
+  // console.log(formData);
 
 
 
@@ -41,6 +41,7 @@ export default function Profile() {
     
     (error) => {
       setFileUploadError(true);
+      console.log(error);
     },
     ()=> {
       getDownloadURL(uploadTask.snapshot.ref)
@@ -48,6 +49,7 @@ export default function Profile() {
 
       )
     }
+    
 );
   }
   return (
